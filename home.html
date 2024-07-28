@@ -1,37 +1,44 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <title>HippoType</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <h1>
-            "TypeTrek"
-        </h1>
-        <div id="header">
-            <div id="info">wpm
-            </div>
+ <!doctype html>
+    <html lang="en">
+            <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=yes">
+             <title>TypeTrek</title>
+             <link rel="stylesheet" href="style.css">
+             </head>
+     <body>
+        <h1 id="logotext"> "TypeTrek" </h1>
+        <div id="box">
+
+        <h2 id="timeout">time</h1>
+         <main>
+      
+          <div id="header">
             <div id="buttons">
-                <button id="newGameBtn">New game</button>
-              
+                <button id="newGameBtn">try again</button>  
             </div>
-        </div>
-        <div>
-            <div id="timeout">
-              time
+         </div>
+    
+            <div id="info">
+              wpm
             </div>
             <div id="infotwo">
             </div>
-        </div>
-        <div id="game" tabindex="0">
+            <div id="infothree">
+                accuracy:
+            </div>
+             <div id="game" tabindex="0">
             <div id="words"></div>
             <div id="cursor"></div>
             <div id="focus-error">Click here to focus</div>
-        </div>
-    </main>
-    <script src="typing.js"></script>
+              </div>
+            <div id="mistaken">
+                <h4 id="mistakenLetters">
+                </h4>
+             </div>
+            </main>
+             </div>
+           
+                <script src="typing.js"></script>
 </body>
 </html>

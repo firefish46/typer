@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 :root{
-    --bgColor: #333;
+    --bgColor: #000000;
     --textPrimary: #fff;
     --textSecondary: #666;
-    --primaryColor: rgb(170, 119, 204);
+    --primaryColor: rgba(153, 0, 255, 0.712);
 }
 @font-face {
     font-family: skiplegday;
@@ -18,21 +18,32 @@
     src: url(Organo.ttf);
 }
 body{
-    display: flex;
-    flex-direction: column;
- 
+   
     background-color:var(--bgColor);
     color: var(--textPrimary);
     font-size: 1.4rem;
 }
 main{
-    width: 1080px;
+    background-color: #272727;
+    width: 1000px;
     margin: 20px auto;
     font-family: organo;
 }
 h1{
-    animation: glowingfont 6s infinite;
+   
+    padding: auto;
+margin-bottom: 40px;
+margin-left: 40px;
+   
 }
+
+#logotext{
+    font-family: organo;
+     padding: auto;
+ margin-bottom: 40px;
+ margin-left: 40px;
+     animation: glowingfont 20s infinite;
+ }
 h1 svg{
     width: 40px;
     fill: var(--primaryColor);
@@ -43,29 +54,47 @@ h1 svg{
     margin: 20px 6px 30px;
 }
 #buttons{
+   margin: left 100px;;
    
-    text-align: right;
 }
 #info{
+   
     color: var(--primaryColor);
-    font-family: showg;
+    font-family: organo;
     
+}
+#infothree{
+   
+    color: #979595;
+    font-family: organo;
     
 }
 #timeout{
+    text-align: center;
+    font-size: 1.4em;
+  
     color: var(--primaryColor);
     font-family: organo;
-    margin-right: 2em;
+  
  
 }
 #timeout.hurry{
-   color: #ff0000;
-    animation: glowingfont ,2s , infinite;
+
+
+    animation: blinkfont .5s infinite;
 
 }
 #infotwo{
-   
+  
+    overflow: hidden;
     color: var(--primaryColor);
+   
+    font-family: organo;
+    
+}
+#mistakenLetters{
+    margin-top: 5em;
+    color:#ffc4005b;
  
     font-family: organo;
     
@@ -76,7 +105,7 @@ h1 svg{
     background-color: #000000;
     text-transform: uppercase;
     font-weight: 700;
-
+   
     padding: 5px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -94,10 +123,26 @@ h1 svg{
  
 }
 div#game{
+   margin-top:40px;
+  
+  border-color: #000000;
+ border-radius: 5px;
+   box-shadow: #333;
     line-height:35px;
     height:105px;
     overflow: hidden;
     position: relative;
+    animation: glowing 6s infinite;
+}
+div#box{
+    background-color: #272727   ;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin:40px 300px 40px 300px ;
+    border-color: #000000;
+ border-radius: 5px;
+   box-shadow: #333;
+   animation: glowing 6s infinite;
 }
 div#game:focus{
     outline:0;
@@ -120,6 +165,7 @@ div#game:focus{
     display:none;
 }
 div.word{
+    
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
    
@@ -170,26 +216,47 @@ div.word{
         box-shadow: 0 0 2px #86fffd, 0 0 0px #b8ce85, 0 0 0px #f3ef04, 0 0 0 0px #b0ff6f;
     }
     50% {
-        box-shadow: 0 0 4px #9b910b, 0 0 0px #00fffc, 0 0 8px #81dfe6, 0 0 0px #00fffc;
+        box-shadow: 0 0 4px #fceb00, 0 0 0px #00fffc, 0 0 8px #81dfe6, 0 0 0px #00fffc;
+    }
+   75% {
+        box-shadow: 0 0 2px #00fffc, 0 0 0px #00fffc, 0 0 6px #00fffc, 0 0 0px #00fffc;
     }
     100% {
-        box-shadow: 0 0 2px #00fffc, 0 0 0px #00fffc, 0 0 6px #00fffc, 0 0 0px #00fffc;
+        box-shadow: 0 0 2px #86fffd, 0 0 0px #b8ce85, 0 0 0px #f3ef04, 0 0 0 0px #b0ff6f;
     }
 }
 @keyframes glowingfont {
     0% {
-       color: #9748ff;
+       color: #000000;
     }
     25% {
-        color: #6c007a;
+        color: #0000003f;
     }
     50% {
-        color: #431157;
+        color: #b700ff;
      }
     75% {
-        color: #000000;
+        color: #0000001a;
     }
     100% {
-        color: #8104bb;
+        color: #000000;
+    }
+}
+
+@keyframes blinkfont {
+    0% {
+       color: #ff0c0c;
+    }
+    25% {
+        color: #8900c900;
+    }
+    50% {
+        color: #ff0000;
+     }
+    75% {
+        color: #00000000;
+    }
+    100% {
+        color: #ff0c0c;
     }
 }
