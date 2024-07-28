@@ -1,0 +1,201 @@
+
+:root{
+    --bgColor: #000000;
+    --textPrimary: #fff;
+    --textSecondary: #666;
+    --primaryColor: rgba(153, 0, 255, 0.712);
+}
+@font-face {
+    font-family: skiplegday;
+    src: url(skiplegday.ttf);
+}
+@font-face {
+    font-family: showg;
+    src: url(SHOWG\ \(1\).TTF);
+}
+@font-face {
+    font-family: organo;
+    src: url(Organo.ttf);
+}
+body{
+   
+    background-color:var(--bgColor);
+    color: var(--textPrimary);
+    font-size: 1.4rem;
+}
+main{
+    background-color: #272727;
+    width: 1000px;
+    margin: 20px auto;
+    font-family: organo;
+}
+h1{
+   
+    padding: auto;
+margin-bottom: 40px;
+margin-left: 40px;
+   
+}
+
+#logotext2{
+    font-family: organo;
+     padding: auto;
+ margin-bottom: 40px;
+ margin-left: 40px;
+     animation: glowingfont 20s infinite;
+ }  
+ div#mainbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #272727   ;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin:40px 300px 40px 300px ;
+    border-color: #000000;
+ border-radius: 5px;
+   box-shadow: #333;
+   animation: glowing 6s infinite;
+   font-family: organo;
+}
+div#input{
+    
+    padding: 40px;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    margin-top:40px;
+  border-color: #000000;
+ border-radius: 5px;
+   box-shadow: #333;
+    line-height:normal;
+    height:max-content;
+    box-shadow: 0   0 0 #312f2f, 10px 0 10px #000000, 10px 10px 10px #131312, 0px 0px 10px  #696969;
+    
+    font-family: organo;
+}
+
+#mainbox:focus #focus-error{
+    display:none;
+}
+#focus-error {
+    position: relative;
+    inset: 0;
+    text-align: center;
+    padding-top: 35px;
+    font-family: skiplegday;
+}
+div#input2{
+    
+    padding: 40px;
+   
+    align-items: center;
+    margin-top:40px;
+  border-color: #000000;
+ border-radius: 5px;
+   box-shadow: #333;
+    line-height:normal; 
+    height:max-content;
+    
+    box-shadow: 0   0 0 #312f2f, 10px 0 10px #000000, 10px 10px 10px #131312, 0px 0px 10px  #696969;
+
+    font-family: organo;
+}
+.in{
+    font-family: 'Roboto Mono', monospace;
+    height: 30px;
+    font-weight: 300;
+    border-radius: 5px;
+    width: 250px;;
+   text-align:center;
+ 
+   background-color:#918d8d;
+    inset: 0;
+}
+div#input:focus{
+    outline:0;
+}
+
+.btn{
+    width: 120px;
+    height: 30px;
+    font-weight: 500;
+
+    font-family: organo;
+}
+.btn2{
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    font-family: organo;
+    box-shadow: 0 0 0px #000000, 0 0 0px #312e2e, 0 0 0px #000000, 0 0 40px #000000;
+
+}
+.btn2:hover{
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+display: block;
+filter: drop-shadow(0 0 10px #fffdef);
+transition-duration: 0.6s;
+}
+.btn:hover{
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+display: block;
+filter: drop-shadow(0 0 10px #fffdef);
+transition-duration: 0.6s;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 0px #524f4f, 0 0 0px #312e2e, 0 0 0px #000000, 0 0 40px #757272;
+    }
+    50% {
+        box-shadow: 0 0 0px #000000, 0 0 0px #312e2e, 0 0 0px #000000, 0 0 40px #000000;
+    }
+   75% {
+    box-shadow: 0 0 0px #666565, 0 0 0px #616161, 0 0 0px #6e6e6e, 0 0 40px #635f5f;
+    }
+    100% {
+        box-shadow: 0 0 0px #000000, 0 0 0px #312e2e, 0 0 0px #000000, 0 0 40px #5c5c5c;
+    }
+}
+@keyframes glowingfont {
+    0% {
+       color: #d1a9a9;
+    }
+    25% {
+        color: #a5c7eead;
+    }
+    50% {
+        color: #b700ff;
+     }
+    75% {
+        color: #cebaa183;
+    }
+    100% {
+        color: #cf9090;
+    }
+}
+
+@keyframes blinkfont {
+    0% {
+       color: #ff0c0c;
+    }
+    25% {
+        color: #8900c900;
+    }
+    50% {
+        color: #ff0000;
+     }
+    75% {
+        color: #00000000;
+    }
+    100% {
+        color: #ff0c0c;
+    }
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
 :root{
     --bgColor: #000000;
     --textPrimary: #fff;
@@ -73,15 +73,14 @@ h1 svg{
     text-align: center;
     font-size: 1.4em;
   
-    color: var(--primaryColor);
+   
     font-family: organo;
   
  
 }
 #timeout.hurry{
-
-
-    animation: blinkfont .5s infinite;
+    font-family: organo;
+    animation: transcolor 9s infinite;
 
 }
 #infotwo{
@@ -259,4 +258,16 @@ div.word{
     100% {
         color: #ff0c0c;
     }
+}
+@keyframes transcolor {
+0%{
+    color: rgb(255, 251, 7);
+}
+50%{
+    color: rgb(255, 119, 7);
+}
+100%{
+    color: rgb(255, 7, 7);
+}
+
 }
